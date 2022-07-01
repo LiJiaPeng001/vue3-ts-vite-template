@@ -8,11 +8,11 @@
 </template>
 
 <script lang="ts" setup>
-let { x, y } = useMouse()
+let { x, y } = useMouse();
 
-const { sRGBHex, open } = useEyeDropper()
+const { sRGBHex, open } = useEyeDropper();
 
-console.log(sRGBHex.value)
+console.log(sRGBHex.value);
 </script>
 
 <style lang="less" scoped>
