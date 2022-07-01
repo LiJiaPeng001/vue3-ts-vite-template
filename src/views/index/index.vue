@@ -8,8 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-let { x, y } = useMouse();
-
+const { x, y } = useMouse();
 const { sRGBHex, open } = useEyeDropper();
 
 console.log(sRGBHex.value);

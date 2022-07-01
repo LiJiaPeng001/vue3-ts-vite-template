@@ -11,10 +11,12 @@
   "dependencies": {
     "@vueuse/components": "^8.7.5",
     "@vueuse/core": "^8.7.5",
+    "axios": "^0.27.2",
     "pinia": "^2.0.14",
     "vue": "^3.2.25",
     "vue-router": "4"
   },
+  "homepage": "https://github.com/LiJiaPeng001/vue3-ts-vite-template",
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
