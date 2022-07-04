@@ -4,12 +4,23 @@
     <div class="text">y：{{ y }}</div>
     <div class="text">{{ sRGBHex }}</div>
     <button class="btn" @click="open()">open rgb</button>
+    <br />
+    <button class="btn" @click="fetchData()">fetchData</button>
   </div>
 </template>
 
 <script lang="ts" setup>
+import request from "@/utils/request/index";
+
 const { x, y } = useMouse();
 const { sRGBHex, open } = useEyeDropper();
+
+async function fetchData() {
+  let d = await request({
+    url: "/test",
+  });
+  console.log(d);
+}
 
 console.log(sRGBHex.value);
 </script>
@@ -27,6 +38,9 @@ console.log(sRGBHex.value);
     height: 500px;
     margin: 0 auto;
     background-color: pink;
+  }
+  .btn {
+    margin-bottom: 10px;
   }
 }
 </style>
