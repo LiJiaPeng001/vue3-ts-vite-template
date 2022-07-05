@@ -3,7 +3,11 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:vue/essential", "prettier", "./.eslintrc-auto-import.json"],
+  extends: [
+    "plugin:vue/vue3-recommended",
+    "prettier",
+    "./.eslintrc-auto-import.json",
+  ],
   parserOptions: {
     ecmaVersion: "latest",
     parser: "@typescript-eslint/parser",
@@ -15,4 +19,4 @@ module.exports = {
     "vue/multi-word-component-names": "off", // 去除组件只能多单词组成
     "no-unused-vars": ["error"],
   },
-}
+};
