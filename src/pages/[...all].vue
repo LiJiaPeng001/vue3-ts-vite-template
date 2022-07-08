@@ -1,5 +1,5 @@
 <template>
-  <div font-50 size-50 class="container">404</div>
+  <div text-30 text-center font-600 m-100>404</div>
 </template>
 
 <script lang="ts" setup></script>

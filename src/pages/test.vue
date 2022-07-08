@@ -1,13 +1,3 @@
 <template>
-  <div class="container">
-    <container></container>
-  </div>
+  <div text-30 text-center font-600 m-100>test</div>
 </template>
-
-<script lang="ts" setup>
-const container = defineComponent({
-  render() {
-    return h("div", "test");
-  },
-});
-</script>

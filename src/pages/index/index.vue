@@ -1,13 +1,13 @@
 <template>
-  <div text-center text-20>
-    <div m-20 text-blue-600 font-bold>x：{{ x }}</div>
+  <div text-center text-20 h-200vh>
+    <div m-20 font-bold>x：{{ x }}</div>
     <div mb-20>y：{{ y }}</div>
     <div mb-20>{{ sRGBHex }}</div>
-    <button class="btn" @click="open()">open rgb</button>
+    <button class="btn" m-b-12 @click="open()">open rgb</button>
     <br />
-    <button class="btn" @click="fetchData()">fetchData</button>
+    <button class="btn" m-b-12 @click="fetchData()">fetchData</button>
     <br />
-    <button class="btn" @click="openDialog">base-dialog</button>
+    <button class="btn" m-b-12 @click="openDialog">base-dialog</button>
     <base-dialog v-model:visible="visible">
       <div ref="content" class="scroll-content" @touchmove.stop>
         <div v-for="it in 10" :key="it" class="item"></div>
