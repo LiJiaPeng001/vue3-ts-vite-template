@@ -54,12 +54,24 @@
       </svg>
     </div>
   </header>
+  <div class="action-btn center-flex">
+    <button class="btn" @click="toTest">/test</button>
+    <button class="btn" @click="back">back</button>
+  </div>
 </template>
 
 <script lang="ts" setup>
-let title = import.meta.env.VITE_APP_TITLE
-let isDark = useDark()
-let toggle = useToggle(isDark)
+let title = import.meta.env.VITE_APP_TITLE;
+let isDark = useDark();
+let toggle = useToggle(isDark);
+let router = useRouter();
+
+function back() {
+  router.back();
+}
+function toTest() {
+  router.push("/test");
+}
 </script>
 
 <style scoped lang="less">
@@ -71,6 +83,15 @@ header {
     margin-left: 20px;
     width: 24px;
     height: 24px;
+    cursor: pointer;
+  }
+}
+.action-btn {
+  a {
+    color: #fff;
+  }
+  .btn {
+    margin-right: 15px;
   }
 }
 </style>

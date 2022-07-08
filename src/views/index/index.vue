@@ -58,8 +58,6 @@ function loadOver(e: TouchEvent) {
     e.preventDefault();
   }
 }
-
-console.log(sRGBHex.value);
 </script>
 
 <style lang="less" scoped>
