@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vite-plugin-pages/client-react" />
 
 declare module "*.vue" {
   import type { DefineComponent } from "vue";
@@ -7,6 +8,7 @@ declare module "*.vue" {
   export default component;
 }
 
-declare module "@/utils/*";
-declare module "@/store/*";
-declare module "@/components/*";
+declare module "~/utils/*";
+declare module "~/store/*";
+declare module "~/components/*";
+declare module "~pages*";

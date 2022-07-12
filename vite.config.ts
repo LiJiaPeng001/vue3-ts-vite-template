@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import autoImport from "unplugin-auto-import/vite";
 import Unocss from 'unocss/vite'
-
+import pages from "vite-plugin-pages"
 import viteHtmlPlugin from "./src/utils/viteHtmlPlugin/index";
 
 function getEnvVariable(mode: string) {
@@ -12,18 +12,21 @@ function getEnvVariable(mode: string) {
 
 export default ({ mode }: ConfigEnv) => {
   return defineConfig({
-    root: process.cwd(), // index.html所在文件
     base: "/", // 基础路径
     define: {
-      appName: JSON.stringify("my-custom-name"),
+      appName: JSON.stringify("peeeng-cli"),
     }, // 全局变量
     resolve: {
       alias: {
-        "@": resolve(__dirname, "./src"),
+        "~": resolve(__dirname, "./src"),
       },
     },
     plugins: [
       vue(),
+      pages({
+        importMode: 'async',
+        exclude: ['**/components/*.vue'],
+      }),
       autoImport({
         imports: ["vue", "vue-router", "@vueuse/core"],
         eslintrc: {

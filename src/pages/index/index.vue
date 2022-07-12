@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
-    <div w-100 class="text">x：{{ x }}</div>
-    <div class="text">y：{{ y }}</div>
-    <div class="text">{{ sRGBHex }}</div>
+  <div text-center text-20>
+    <div m-20 text-blue-600 font-bold>x：{{ x }}</div>
+    <div mb-20>y：{{ y }}</div>
+    <div mb-20>{{ sRGBHex }}</div>
     <button class="btn" @click="open()">open rgb</button>
     <br />
     <button class="btn" @click="fetchData()">fetchData</button>
@@ -17,8 +17,8 @@
 </template>
 
 <script lang="ts" setup>
-import request from "@/utils/request/index";
-import BaseDialog from "@/common/base-dialog/index.vue";
+import request from "~/utils/request/index";
+import BaseDialog from "~/common/base-dialog/index.vue";
 
 const { x, y } = useMouse();
 const { sRGBHex, open } = useEyeDropper();
