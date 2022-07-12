@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="text">x：{{ x }}</div>
+    <div w-100 class="text">x：{{ x }}</div>
     <div class="text">y：{{ y }}</div>
     <div class="text">{{ sRGBHex }}</div>
     <button class="btn" @click="open()">open rgb</button>

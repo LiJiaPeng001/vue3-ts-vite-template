@@ -2,6 +2,8 @@ import { defineConfig, loadEnv, ConfigEnv } from "vite";
 import vue from "@vitejs/plugin-vue";
 import { resolve } from "path";
 import autoImport from "unplugin-auto-import/vite";
+import Unocss from 'unocss/vite'
+
 import viteHtmlPlugin from "./src/utils/viteHtmlPlugin/index";
 
 function getEnvVariable(mode: string) {
@@ -30,6 +32,9 @@ export default ({ mode }: ConfigEnv) => {
       }),
       viteHtmlPlugin({
         metaEnv: getEnvVariable(mode),
+      }),
+      Unocss({
+        configFile: resolve(__dirname, 'unocss.config.ts'),
       }),
     ],
     css: {
