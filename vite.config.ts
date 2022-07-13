@@ -52,6 +52,7 @@ export default ({ mode }: ConfigEnv) => {
     },
     server: {
       port: 2525,
+      host: "0.0.0.0",
       proxy: {}, // cross
     },
   })

@@ -15,6 +15,7 @@
     <div h-200 bg-lime-4></div>
     <div h-200 bg-lime-5></div>
   </div>
+  <img src="https://p.upyun.com/demo/webp/webp/animated-gif-0.webp" alt="" />
 </template>
 
 <script lang="ts" setup>

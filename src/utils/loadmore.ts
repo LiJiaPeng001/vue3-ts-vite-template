@@ -1,5 +1,3 @@
-import { throttle } from "./throttle-debounce";
-
 /**
  * @param {Function} - toLoadMore 底部触发事件
  * @param {Function} - actionFn   滚动触发事件
@@ -57,7 +55,7 @@ export default class LoadMore extends MoreMain {
   constructor(props: PropsOptions) {
     super(props)
     let { time = 300, toLoadMore = noop, actionFn = noop } = props
-    this.loadMoreFn = throttle(() => {
+    this.loadMoreFn = useThrottleFn(() => {
       let { scrollTop, clientHeight, scrollHeight } = this.getElementClientRect()
       actionFn(scrollTop);
       if (scrollTop + clientHeight >= scrollHeight - 80) {

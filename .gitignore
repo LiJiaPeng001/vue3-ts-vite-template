@@ -23,4 +23,4 @@ dist-ssr
 *.sln
 *.sw?
 .eslintrc-auto-import
-auto-imports.d
+auto-imports*
