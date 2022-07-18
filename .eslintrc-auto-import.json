@@ -1,6 +1,7 @@
 {
   "globals": {
     "EffectScope": true,
+    "LoadMore": true,
     "asyncComputed": true,
     "autoResetRef": true,
     "computed": true,
@@ -127,6 +128,7 @@
     "useDevicesList": true,
     "useDisplayMedia": true,
     "useDocumentVisibility": true,
+    "useDoubled": true,
     "useDraggable": true,
     "useDropZone": true,
     "useElementBounding": true,
@@ -155,6 +157,7 @@
     "useIntervalFn": true,
     "useKeyModifier": true,
     "useLastChanged": true,
+    "useLoadMore": true,
     "useLocalStorage": true,
     "useMagicKeys": true,
     "useManualRefHistory": true,

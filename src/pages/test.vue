@@ -1,6 +1,6 @@
 <template>
   <div
-    ref="container"
+    ref="ele"
     w-500
     h-500
     overflow-y-auto
@@ -15,9 +15,21 @@
     <div h-200 bg-lime-4></div>
     <div h-200 bg-lime-5></div>
   </div>
-  <img src="https://p.upyun.com/demo/webp/webp/animated-gif-0.webp" alt="" />
+  <div text-center color-blue>{{ doubledNum }}</div>
 </template>
 
 <script lang="ts" setup>
-// console.log(useLoadMore, "more");
+let ele = ref<HTMLElement | null>(null);
+let num = ref(10);
+let doubledNum = useDoubled(num);
+
+let actionFn = function (scrollTop: number) {
+  console.log(scrollTop, "wuwuwu");
+};
+onMounted(() => {
+  useLoadMore({ ele: ele.value as HTMLElement, actionFn });
+  setTimeout(() => {
+    num.value = 20;
+  }, 2000);
+});
 </script>

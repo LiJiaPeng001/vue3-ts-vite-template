@@ -51,10 +51,10 @@ class MoreMain {
   }
 }
 
-export default class LoadMore extends MoreMain {
+class LoadMorePage extends MoreMain {
   constructor(props: PropsOptions) {
     super(props)
-    let { time = 300, toLoadMore = noop, actionFn = noop } = props
+    let { time = 100, toLoadMore = noop, actionFn = noop } = props
     this.loadMoreFn = useThrottleFn(() => {
       let { scrollTop, clientHeight, scrollHeight } = this.getElementClientRect()
       actionFn(scrollTop);
@@ -65,11 +65,9 @@ export default class LoadMore extends MoreMain {
   }
 }
 
-export function useLoadMore(props: PropsOptions) {
-  let loadmore = new LoadMore(props)
-  onMounted(() => {
-    loadmore.mounted()
-  })
+export default function useLoadMore(props: PropsOptions) {
+  let loadmore = new LoadMorePage(props)
+  loadmore.mounted()
   onUnmounted(() => {
     loadmore.destroy()
   })

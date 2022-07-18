@@ -11,4 +11,5 @@ declare module "*.vue" {
 declare module "~/utils/*";
 declare module "~/store/*";
 declare module "~/components/*";
+declare module "~/composables/*";
 declare module "~pages*";

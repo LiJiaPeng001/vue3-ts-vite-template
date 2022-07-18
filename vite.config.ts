@@ -32,6 +32,9 @@ export default ({ mode }: ConfigEnv) => {
         eslintrc: {
           enabled: true, // Default `false`
         },
+        dirs: [
+          './src/composables'
+        ]
       }),
       viteHtmlPlugin({
         metaEnv: getEnvVariable(mode),

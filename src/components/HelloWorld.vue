@@ -1,5 +1,5 @@
 <template>
-  <div sticky top-0 bg-hex-f6f6f6>
+  <div sticky top-0 bg-green-9>
     <header class="center-flex" p-t-50>
       <h1>{{ title }}</h1>
       <div class="theme" @click="toggle()">
@@ -56,16 +56,9 @@
       </div>
     </header>
     <div items-center justify-center flex p-50>
-      <button
-        v-for="r in routes"
-        :key="r.path"
-        class="btn"
-        m-r-20
-        @click="onDirect(r.path)"
-      >
-        {{ r.path }}
-      </button>
-      <button class="btn" @click="back">back</button>
+      <button class="btn" m-r-20 @click="onDirect('/test')">/test</button>
+      <button class="btn" m-r-20 @click="onDirect('/')">/</button>
+      <button class="btn" m-r-20 @click="back">back</button>
     </div>
   </div>
 </template>
@@ -75,7 +68,6 @@ let title = import.meta.env.VITE_APP_TITLE;
 let isDark = useDark();
 let toggle = useToggle(isDark);
 let router = useRouter();
-let routes = router.getRoutes();
 
 function back() {
   router.back();
