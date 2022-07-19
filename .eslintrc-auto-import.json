@@ -1,7 +1,6 @@
 {
   "globals": {
     "EffectScope": true,
-    "LoadMore": true,
     "asyncComputed": true,
     "autoResetRef": true,
     "computed": true,

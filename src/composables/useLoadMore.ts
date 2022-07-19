@@ -51,7 +51,7 @@ class MoreMain {
   }
 }
 
-class LoadMorePage extends MoreMain {
+class LoadMore extends MoreMain {
   constructor(props: PropsOptions) {
     super(props)
     let { time = 100, toLoadMore = noop, actionFn = noop } = props
@@ -66,7 +66,7 @@ class LoadMorePage extends MoreMain {
 }
 
 export default function useLoadMore(props: PropsOptions) {
-  let loadmore = new LoadMorePage(props)
+  let loadmore = new LoadMore(props)
   loadmore.mounted()
   onUnmounted(() => {
     loadmore.destroy()

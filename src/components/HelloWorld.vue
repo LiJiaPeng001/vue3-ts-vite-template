@@ -1,8 +1,8 @@
 <template>
-  <div sticky top-0 bg-green-9>
+  <div sticky top-0 shadow-pink-2>
     <header class="center-flex" p-t-50>
       <h1>{{ title }}</h1>
-      <div class="theme" @click="toggle()">
+      <div w-40 h-40 m-l-20 @click="toggle()">
         <svg
           v-if="!isDark"
           xmlns="http://www.w3.org/2000/svg"
